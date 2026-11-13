@@ -23,3 +23,15 @@ extern "C" void Reset_Handler() {
   while (true) {
   }
 }
+
+extern "C" void Default_Handler() {
+    while(true) {
+    asm volatile("nop");
+    }
+}
+
+extern "C" void HardFault_Handler() {
+    while(true) {
+        asm volatile("nop");
+    }
+}
